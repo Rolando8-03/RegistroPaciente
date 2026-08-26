@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label text="Usuario:" textFill="#238c39">
+         <font>
+            <Font name="Cascadia Code Regular" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUser" promptText="Ingrese su Usuario">
+         <font>
+            <Font name="Cascadia Code Regular" size="18.0" />
+         </font>
+      </TextField>
+      <Label text="Contraseña:" textFill="#238c39">
+         <font>
+            <Font name="Cascadia Code Regular" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPassword" promptText="Ingrese su Contraseña">
+         <font>
+            <Font name="Cascadia Code Regular" size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnLogin" mnemonicParsing="false" text="Ingresar" textFill="#3838a8">
+         <font>
+            <Font name="Cascadia Code Regular" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblMessage">
+         <font>
+            <Font name="Cascadia Code Regular" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>
