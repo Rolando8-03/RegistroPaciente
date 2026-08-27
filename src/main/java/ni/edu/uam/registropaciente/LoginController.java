@@ -32,9 +32,17 @@ public class LoginController {
 
         if (user.equals("admin") && password.equals("1234")) {
             mostrarFormularioPaciente();
+            lblMessage.setText("Bienvenido!");
         } else {
             lblMessage.setText("Usuario o contraseña incorrectos");
+            limpiarCampos();
         }
+    }
+
+    private void limpiarCampos(){
+        txtUser.clear();
+        txtPassword.clear();
+        txtUser.requestFocus();
     }
 
     private void mostrarFormularioPaciente() {

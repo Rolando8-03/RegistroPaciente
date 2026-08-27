@@ -10,7 +10,7 @@ public class LoginApplication extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader
                 (PatientApplication.class.getResource("login-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(fxmlLoader.load(), 300,350);
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
