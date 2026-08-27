@@ -5,30 +5,77 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: #c0c0c0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.registropaciente.PatientController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="438.0" spacing="10.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.registropaciente.PatientController">
    <children>
-      <Label fx:id="lblNombres" text="Nombres:" textFill="#0099ab">
+      <Label fx:id="lblNombres" text="Nombres">
          <font>
-            <Font name="Cascadia Code Regular" size="18.0" />
+            <Font name="Cascadia Code Regular" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNombres" />
-      <Label fx:id="lblApellidos" text="Apellidos:" textFill="#0099ab">
+      <TextField fx:id="txtNombres" promptText="Ingrese su nombre">
          <font>
-            <Font name="Cascadia Code Regular" size="18.0" />
+            <Font name="Cascadia Code Regular" size="13.0" />
+         </font></TextField>
+      <Label fx:id="lblApellidos" text="Apellidos">
+         <font>
+            <Font name="Cascadia Code Regular" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="txtApellidos" />
-      <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#agregarOnClick" text="Agregar" textAlignment="CENTER" textFill="#272828" textOverrun="CENTER_ELLIPSIS">
+      <TextField fx:id="txtApellidos" alignment="TOP_LEFT" promptText="Ingrese su apellido">
          <font>
-            <Font name="Cascadia Code Regular" size="16.0" />
-         </font>
-      </Button>
-      <Label fx:id="lblContador" text="Registros Guardados: 0" textAlignment="CENTER" textFill="#009aab">
+            <Font name="Cascadia Code Regular" size="13.0" />
+         </font></TextField>
+      <HBox alignment="TOP_CENTER" prefHeight="37.0" prefWidth="557.0">
+         <children>
+            <Label text="Fecha Nacimiento ">
+               <font>
+                  <Font name="Cascadia Code Regular" size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dpFechaNac" promptText="Seleccione su fecha de nacimiento" />
+         </children></HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="323.0" spacing="10.0">
+         <children>
+            <Label text="Género">
+               <font>
+                  <Font name="Cascadia Code Regular" size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rbMasculino" mnemonicParsing="false" text="Masculino">
+               <font>
+                  <Font name="Cascadia Code Regular" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rbFemenino" mnemonicParsing="false" text="Femenino">
+               <font>
+                  <Font name="Cascadia Code Regular" size="13.0" />
+               </font>
+            </RadioButton>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="400.0" spacing="190.0">
+         <children>
+            <CheckBox fx:id="cbTieneSeguro" mnemonicParsing="false" text="Tiene Seguro" textFill="#0f09c4">
+               <font>
+                  <Font name="Cascadia Code Regular" size="15.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#guardarOnClick" text="Agregar" textAlignment="CENTER" textFill="#0f09c4" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Cascadia Code Regular" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="lblRegistros" text="Registros Guardados: 0" textAlignment="CENTER" textFill="#0f09c4">
          <font>
-            <Font name="Cascadia Code Regular" size="18.0" />
+            <Font name="Cascadia Code Regular" size="15.0" />
          </font>
       </Label>
+      <ListView fx:id="lvRegistros" prefHeight="200.0" prefWidth="200.0" />
    </children>
    <opaqueInsets>
       <Insets />

@@ -1,22 +1,26 @@
 package ni.edu.uam.registropaciente.dao;
 
+import ni.edu.uam.registropaciente.interfaces.Crud;
 import ni.edu.uam.registropaciente.modelos.Patient;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PatientDAO {
-    List<Patient> pacientes;
+public class PatientDAO implements Crud<Patient> {
 
-    public PatientDAO(){
+    private final List<Patient> pacientes;
+
+    public PatientDAO() {
         pacientes = new ArrayList<>();
     }
 
-    public void agregarPaciente(Patient patient){
-        pacientes.add(patient);
+    @Override
+    public void agregar(Patient entidad) {
+        pacientes.add(entidad);
     }
 
-    public List<Patient> listarPacientes(){
+    @Override
+    public List<Patient> obtenerRegistros() {
         return pacientes;
     }
 }

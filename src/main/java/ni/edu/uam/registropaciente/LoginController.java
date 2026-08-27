@@ -52,7 +52,6 @@ public class LoginController {
 
         } catch (IOException e) {
             lblMessage.setText("No se pudo abrir el formulario");
-            e.printStackTrace();
         }
     }
 }
